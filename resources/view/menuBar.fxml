@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
+
+<MenuBar fx:id="menubar" prefHeight="25.0" prefWidth="141.0" xmlns="http://javafx.com/javafx/8.0.141" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.MenuBarController">
+  <menus>
+    <Menu fx:id="menuArquivo" mnemonicParsing="false" text="Arquivo">
+      <items>
+        <MenuItem fx:id="miSair" mnemonicParsing="false" onAction="#sair" text="Sair" />
+      </items>
+    </Menu>
+    <Menu fx:id="menuAjuda" mnemonicParsing="false" text="Ajuda">
+      <items>
+        <MenuItem fx:id="miSobre" mnemonicParsing="false" onAction="#miSobreOnAction" text="Sobre" />
+      </items>
+    </Menu>
+  </menus>
+</MenuBar>

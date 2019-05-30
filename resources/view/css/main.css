@@ -1,0 +1,169 @@
+/* Botões em geral */
+.botao{
+    -fx-font-size: 12px;
+    -jfx-button-type: FLAT;
+    -fx-background-color: GREEN;
+    -fx-pref-width: 120;
+    -fx-text-fill: WHITE;
+}
+
+/* Boxes em geral */
+.boxes{
+	-fx-background-color: #FFFCC4;
+}
+
+/* TextFields em geral */
+.textfields{
+	-fx-alignment: CENTER;
+	-fx-pref-width: 200;
+	-jfx-focus-color: GREEN;
+	-jfx-unfocus-color: BLACK;
+	-jfx-label-float: true;
+}
+
+/* Paineis em geral */
+.panes{
+	-fx-background-color: #BEFF93;
+}
+
+/* ========== Tables em geral ========== */
+	.tables{
+		-fx-background-color: BLACK;
+		-fx-table-cell-border-color: transparent;
+    	-fx-table-header-border-color: transparent;
+	}
+	
+	/* Colunas das tables */
+	.tables .table-column{
+		-fx-alignment: CENTER;
+	}
+	
+	/* Header das colunas*/
+	.tables .column-header{
+		-fx-background-color: GREEN;
+	}
+	.tables .column-header .text{
+		-fx-fill: WHITE;
+	}
+	.tables .column-header-background .filler{
+		-fx-background-color: DARKGREEN;
+	}
+	
+	/* Cores das linhas da tabela */
+	.tables .table-row-cell:odd {
+		-fx-background-color: #FFFCC4;
+	}
+	.tables .table-row-cell:even {
+		-fx-background-color: #CCBB72;
+	}
+	/*.tables .table-row-cell:focused,*/
+	.tables .table-row-cell:selected {
+		-fx-background-color: #094F00;
+		-fx-table-cell-border-color: transparent;
+    	-fx-table-header-border-color: transparent;
+	}
+	
+	/* Texto da tabela */
+	.tables .table-row-cell .text {
+		-fx-fill: BLACK;
+	}
+	/*.tables .table-row-cell:focused .text,*/
+	.tables .table-row-cell:selected .text {
+		-fx-fill: WHITE;
+	}
+	
+	#tbOutros .table-row-cell,
+	#tbDoacoes .table-row-cell,
+	#tbAtividades .table-row-cell,
+	#tbDescarte .table-row-cell {
+		-fx-cell-size: 48px;
+	}
+	#descColumn,
+	#itensColumn,
+	#atividadeColumn {
+		-fx-alignment: TOP-LEFT;
+	}
+/* ========== Fim tables ============ */
+
+/* ========== Combo Boxes =========== */
+
+	/* Combo boxes em geral*/
+	.combo-boxes {
+		-fx-pref-width: 200;
+		-jfx-focus-color: GREEN;
+		-jfx-unfocus-color: BLACK;
+		-jfx-label-float: true;
+	}
+	
+	.combo-boxes .combo-box-popup .list-view {
+		-fx-background-color: transparent;
+		/*-fx-pref-height: 550;*/
+	}
+	#cBoxTipoItem .combo-box-popup .list-view {
+		-fx-pref-height: 530;
+	}
+	
+	/* Células da listview do popup da combobox */
+	.combo-boxes .combo-box-popup .list-view .list-cell {
+		-fx-background-color: #FFFCC4;
+	}
+	
+	/* Células selecionadas da listview do popup da comboobx */
+	.combo-boxes .combo-box-popup .list-view .list-cell:filled:selected,
+	.combo-boxes .combo-box-popup .list-view .list-cell:filled:hover,
+	.combo-boxes .combo-box-popup .list-view .list-cell:filled:selected:hover {
+		-fx-background-color: GREEN;
+	}
+
+/* ========= Fim Combo Boxes ======== */
+
+/* ========= Scroll Bar ============= */
+	.scroll-bar:horizontal .track,
+	.scroll-bar:vertical .track {
+	    -fx-background-color: #FFFCC4;
+	    -fx-border-color: transparent;
+	    -fx-background-radius: 0.0em;
+	    -fx-border-radius: 2.0em;
+	}
+	
+	.scroll-bar:horizontal .increment-button ,
+	.scroll-bar:horizontal .decrement-button {
+	    -fx-background-color: transparent;
+	    -fx-background-radius: 0.0em;
+	    -fx-padding: 0.0 0.0 10.0 0.0;
+	}
+	
+	.scroll-bar:vertical .increment-button ,
+	.scroll-bar:vertical .decrement-button {
+	    -fx-background-color: transparent;
+	    -fx-background-radius: 0.0em;
+	    -fx-padding: 0.0 10.0 0.0 0.0;
+	}
+	
+	 .scroll-bar .increment-arrow,
+	 .scroll-bar .decrement-arrow {
+	    -fx-shape: " ";    
+	    -fx-padding: 0.15em 0.0;
+	}
+	
+	 .scroll-bar:vertical .increment-arrow,
+	 .scroll-bar:vertical .decrement-arrow {
+	    -fx-shape: " ";    
+	    -fx-padding: 0.0 0.15em;
+	}
+	
+	.scroll-bar:horizontal .thumb,
+	.scroll-bar:vertical .thumb {
+	    -fx-background-color: #CCBB72;
+	    -fx-background-insets: 2.0, 0.0, 0.0;
+	    -fx-background-radius: 2.0em;
+	}
+	
+	.scroll-bar:horizontal .thumb:hover,
+	.scroll-bar:vertical .thumb:hover {
+	    -fx-background-color: #665A26;
+	    -fx-background-insets: 2.0, 0.0, 0.0;
+	    -fx-background-radius: 2.0em;
+	}
+
+/* ========== Fim Scroll Bar ========= */

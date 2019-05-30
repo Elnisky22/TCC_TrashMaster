@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+
+<VBox fx:id="box" alignment="CENTER" maxWidth="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="250.0" styleClass="boxes" stylesheets="@css/main.css" xmlns="http://javafx.com/javafx/8.0.141" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <VBox alignment="CENTER" prefHeight="400.0" prefWidth="250.0">
+         <children>
+            <HBox fx:id="hBoxTop" alignment="CENTER" prefHeight="100.0" prefWidth="200.0" spacing="20.0">
+               <children>
+                  <JFXTextField fx:id="tfQuantidade" alignment="CENTER" labelFloat="true" maxWidth="80.0" promptText="Quantidade" styleClass="textfields" />
+               </children>
+            </HBox>
+            <BorderPane fx:id="bPaneEscolhido" prefHeight="200.0" prefWidth="200.0" />
+            <HBox fx:id="hBoxBot" alignment="TOP_CENTER" prefHeight="100.0" prefWidth="200.0" spacing="5.0">
+               <children>
+                  <JFXTextField fx:id="tfDoador" alignment="CENTER" labelFloat="true" maxWidth="168.0" promptText="Quem está doando?" styleClass="textfields" />
+                  <JFXButton fx:id="btnConfirmar" onAction="#btnConfirmarOnAction" styleClass="botao" text="Confirmar">
+                     <graphic>
+                        <FontAwesomeIconView fill="WHITE" glyphName="CHECK" size="16" />
+                     </graphic>
+                  </JFXButton>
+               </children>
+               <VBox.margin>
+                  <Insets left="10.0" right="10.0" />
+               </VBox.margin>
+            </HBox>
+         </children>
+      </VBox>
+   </children>
+</VBox>

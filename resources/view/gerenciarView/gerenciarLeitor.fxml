@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+
+<BorderPane fx:id="bPaneLeitores" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="450.0" prefWidth="600.0" styleClass="panes" stylesheets="@../css/main.css" xmlns="http://javafx.com/javafx/8.0.141" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.gerenciarController.GerenciarLeitorController">
+   <center>
+      <VBox alignment="CENTER" prefHeight="200.0" prefWidth="100.0" BorderPane.alignment="CENTER">
+         <children>
+            <HBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="30.0" prefWidth="600.0">
+               <children>
+                  <FontAwesomeIconView glyphName="SEARCH" size="18">
+                     <HBox.margin>
+                        <Insets top="5.0" />
+                     </HBox.margin>
+                  </FontAwesomeIconView>
+                  <JFXTextField fx:id="tfBusca" labelFloat="true" maxWidth="125.0" promptText="Busca" styleClass="textfields" />
+                  <JFXButton fx:id="btnDescartar" maxWidth="83.0" onAction="#btnDescartarOnAction" styleClass="botao" text="Descartar">
+                     <graphic>
+                        <FontAwesomeIconView fill="WHITE" glyphName="TRASH_ALT" size="16" />
+                     </graphic>
+                     <HBox.margin>
+                        <Insets left="376.0" />
+                     </HBox.margin>
+                  </JFXButton>
+               </children>
+            </HBox>
+            <TableView fx:id="tbLeitores" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="384.0" prefWidth="600.0" styleClass="tables">
+              <columns>
+                <TableColumn fx:id="IDColumn" maxWidth="50.0" minWidth="50.0" prefWidth="50.0" resizable="false" text="ID" />
+                <TableColumn fx:id="gabineteColumn" prefWidth="73.0" text="ID Gabinete" />
+                  <TableColumn fx:id="notebookColumn" prefWidth="77.0" text="ID Notebook" />
+                  <TableColumn fx:id="marcaColumn" prefWidth="125.0" text="Marca" />
+                  <TableColumn fx:id="modeloColumn" prefWidth="125.0" text="Modelo" />
+                  <TableColumn fx:id="doadorColumn" prefWidth="147.0" text="Doador" />
+              </columns>
+            </TableView>
+            <HBox alignment="BOTTOM_CENTER" prefHeight="100.0" prefWidth="200.0" spacing="27.0">
+               <children>
+                  <JFXTextField fx:id="tfRecebedor" labelFloat="true" promptText="Para quem será doado?" styleClass="textfields" />
+                  <JFXButton fx:id="btnDoar" maxWidth="62.0" onAction="#btnDoarOnAction" styleClass="botao" text="Doar">
+                     <graphic>
+                        <FontAwesomeIconView fill="WHITE" glyphName="TRUCK" size="16" />
+                     </graphic>
+                  </JFXButton>
+               </children>
+            </HBox>
+         </children>
+      </VBox>
+   </center>
+</BorderPane>

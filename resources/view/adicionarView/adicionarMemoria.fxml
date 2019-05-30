@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXCheckBox?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.VBox?>
+
+<GridPane fx:id="gPaneInserir" alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="225.0" prefWidth="200.0" styleClass="boxes" stylesheets="@../css/main.css" xmlns="http://javafx.com/javafx/8.0.141" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.adicionarController.AdicionarMemoriaController">
+  <columnConstraints>
+    <ColumnConstraints hgrow="SOMETIMES" maxWidth="184.0" minWidth="10.0" prefWidth="172.0" />
+  </columnConstraints>
+  <rowConstraints>
+    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+  </rowConstraints>
+   <children>
+      <JFXTextField fx:id="tfMarca" alignment="CENTER" labelFloat="true" promptText="Marca" styleClass="textfields" />
+      <VBox prefHeight="200.0" prefWidth="100.0" GridPane.rowIndex="1">
+         <children>
+            <JFXTextField fx:id="tfModelo" alignment="CENTER" labelFloat="true" promptText="Modelo" styleClass="textfields" />
+            <JFXCheckBox fx:id="cbDesconhecido" checkedColor="GREEN" onAction="#cbDesconhecidoOnAction" text="Desconhecido">
+               <VBox.margin>
+                  <Insets top="5.0" />
+               </VBox.margin>
+            </JFXCheckBox>
+         </children>
+      </VBox>
+      <JFXTextField fx:id="tfTipo" alignment="CENTER" labelFloat="true" promptText="Tipo (SDRAM - DDR - etc)" styleClass="textfields" GridPane.rowIndex="2" />
+      <JFXTextField fx:id="tfCapacidade" alignment="CENTER" labelFloat="true" promptText="Capacidade" styleClass="textfields" GridPane.rowIndex="3" />
+      <Label fx:id="labelCapacidade" alignment="TOP_CENTER" contentDisplay="RIGHT" nodeOrientation="LEFT_TO_RIGHT" text="GB" GridPane.halignment="RIGHT" GridPane.rowIndex="3" />
+   </children>
+</GridPane>

@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXTextArea?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+
+<VBox fx:id="box" alignment="CENTER" maxWidth="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="250.0" styleClass="boxes" stylesheets="@css/main.css" xmlns="http://javafx.com/javafx/8.0.141" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <JFXTextArea fx:id="taAtividade" labelFloat="true" maxWidth="230.0" promptText="Nova Atividade" styleClass="textfields" />
+      <HBox fx:id="hBoxBot" alignment="CENTER" prefHeight="100.0" prefWidth="200.0" spacing="5.0">
+         <children>
+            <JFXTextField fx:id="tfVoluntario" alignment="CENTER" labelFloat="true" maxWidth="160.0" promptText="Nome(s)" styleClass="textfields" />
+            <JFXButton fx:id="btnConfirmar" onAction="#btnConfirmarOnAction" styleClass="botao" text="Confirmar">
+               <graphic>
+                  <FontAwesomeIconView fill="WHITE" glyphName="CHECK" size="16" />
+               </graphic>
+            </JFXButton>
+         </children>
+         <VBox.margin>
+            <Insets left="10.0" right="10.0" />
+         </VBox.margin>
+      </HBox>
+      <Label fx:id="lblData" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="15.0" prefWidth="100.0" text="Data: ">
+         <VBox.margin>
+            <Insets right="130.0" />
+         </VBox.margin>
+      </Label>
+   </children>
+</VBox>

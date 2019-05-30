@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane fx:id="bPaneDescarte" minHeight="-Infinity" minWidth="-Infinity" prefHeight="680.0" prefWidth="800.0" styleClass="panes" stylesheets="@css/main.css" xmlns="http://javafx.com/javafx/8.0.141" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.DescarteController">
+   <center>
+      <VBox prefHeight="200.0" prefWidth="100.0" spacing="5.0" BorderPane.alignment="TOP_LEFT">
+         <children>
+            <HBox prefHeight="100.0" prefWidth="200.0" spacing="10.0">
+               <children>
+                  <FontAwesomeIconView glyphName="TRASH_ALT" size="100">
+                     <HBox.margin>
+                        <Insets left="10.0" />
+                     </HBox.margin>
+                  </FontAwesomeIconView>
+                  <VBox prefHeight="102.0" prefWidth="700.0">
+                     <children>
+                        <Label text="Relatório de Descarte">
+                           <font>
+                              <Font size="36.0" />
+                           </font>
+                        </Label>
+                        <Label text="Visualizar Relatório contendo todos os Descartes ocorridos, sendo possível Gerar um PDF e Limpar para reiniciar." wrapText="true">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </VBox>
+               </children>
+            </HBox>
+            <HBox alignment="CENTER_LEFT" maxHeight="-Infinity" minHeight="-Infinity" prefHeight="30.0" prefWidth="200.0">
+               <children>
+                  <FontAwesomeIconView glyphName="SEARCH" size="18" />
+                  <JFXTextField fx:id="tfBusca" labelFloat="true" maxWidth="125.0" promptText="Busca" styleClass="textfields" />
+               </children>
+               <VBox.margin>
+                  <Insets left="10.0" />
+               </VBox.margin>
+            </HBox>
+            <TableView fx:id="tbDescarte" minHeight="-Infinity" minWidth="-Infinity" prefHeight="490.0" prefWidth="200.0" styleClass="tables">
+              <columns>
+                <TableColumn fx:id="dataColumn" minWidth="-1.0" prefWidth="125.0" text="Data" />
+                <TableColumn fx:id="itensColumn" prefWidth="482.0" text="Itens" />
+              </columns>
+               <VBox.margin>
+                  <Insets bottom="10.0" left="10.0" right="10.0" />
+               </VBox.margin>
+            </TableView>
+            <HBox prefHeight="20.0" prefWidth="200.0" spacing="10.0">
+               <children>
+                  <JFXButton fx:id="btnLimpar" onAction="#btnLimparOnAction" styleClass="botao" text="Limpar">
+                     <graphic>
+                        <FontAwesomeIconView fill="WHITE" glyphName="ERASER" size="16" />
+                     </graphic>
+                  </JFXButton>
+                  <JFXButton fx:id="btnGerarPDF" onAction="#btnGerarPDFOnAction" styleClass="botao" text="Gerar PDF">
+                     <graphic>
+                        <FontAwesomeIconView fill="WHITE" glyphName="FILE_PDF_ALT" size="16" />
+                     </graphic></JFXButton>
+               </children>
+               <VBox.margin>
+                  <Insets left="10.0" />
+               </VBox.margin>
+            </HBox>
+         </children>
+      </VBox>
+   </center>
+</BorderPane>

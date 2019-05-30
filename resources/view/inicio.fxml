@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.VBox?>
+
+<VBox fx:id="vBoxInicio" alignment="TOP_CENTER" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="500.0" prefWidth="225.0" spacing="10.0" styleClass="boxes" stylesheets="@css/main.css" xmlns="http://javafx.com/javafx/8.0.141" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.InicioController">
+   <children>
+      <ImageView fx:id="imgLogo" fitHeight="200.0" fitWidth="250.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="/images/logo.png" />
+         </image>
+      </ImageView>
+      <JFXButton fx:id="btnEstoque" accessibleText="Adicionar novo componente." onAction="#btnEstoqueOnAction" prefHeight="42.0" prefWidth="120.0" ripplerFill="WHITE" styleClass="botao" text="Gerenciar Estoque" textAlignment="CENTER" textFill="WHITE" wrapText="true">
+         <graphic>
+            <FontAwesomeIconView fill="WHITE" glyphName="CUBE" size="16" />
+         </graphic></JFXButton>
+      <JFXButton fx:id="btnAtividades" onAction="#btnAtividadesOnAction" prefHeight="42.0" styleClass="botao" text="Atividades Realizadas" textAlignment="CENTER" wrapText="true">
+         <graphic>
+            <FontAwesomeIconView fill="WHITE" glyphName="LEANPUB" size="16" />
+         </graphic></JFXButton>
+      <JFXButton fx:id="btnDoacoes" onAction="#btnDoacoesOnAction" prefHeight="42.0" styleClass="botao" text="Relatório de Doações" textAlignment="CENTER" wrapText="true">
+         <graphic>
+            <FontAwesomeIconView fill="WHITE" glyphName="TRUCK" size="16" />
+         </graphic></JFXButton>
+      <JFXButton fx:id="btnDescarte" onAction="#btnDescarteOnAction" prefHeight="42.0" styleClass="botao" text="Relatório de Descarte" textAlignment="CENTER" wrapText="true">
+         <graphic>
+            <FontAwesomeIconView fill="WHITE" glyphName="TRASH_ALT" size="16" />
+         </graphic>
+      </JFXButton>
+      <JFXButton fx:id="btnSair" onAction="#btnSairOnAction" styleClass="botao" text="Sair">
+         <graphic>
+            <FontAwesomeIconView fill="WHITE" glyphName="SIGN_OUT" size="16" />
+         </graphic></JFXButton>
+   </children>
+   <padding>
+      <Insets bottom="20.0" />
+   </padding>
+</VBox>
